@@ -1,5 +1,5 @@
 import React from 'react';
-import Routes from "@/router"
+import { NavLink  } from "react-router-dom";
 function App() {
    let toPathlist=[
        {name:"信息页",path:"/Info"},
@@ -11,13 +11,10 @@ function App() {
       <header  style={{height:"50px",background:"#fff"}}>
             {
                 toPathlist.map((item,index)=>(
-                    <li key={index}>{
-                        item.name
-                    }</li>
+                  <NavLink key={index} to={item.path}>{item.name}</NavLink>
                 ))
             }
       </header>
-      <Routes/>
     </div>
   );
 }
