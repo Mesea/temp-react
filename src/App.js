@@ -35,16 +35,7 @@ class App extends React.Component{
   }
   componentDidMount(){
     // ?
-    axios({
-      method: 'get',
-      url: '/apis/home/getRecommendShow',
-      data: {
-        cityAdd:"",
-        page:"2",
-        version:"5.1.4",
-        referer:"2"
-      }
-    });
+ 
   }
 }
 

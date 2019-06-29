@@ -1,12 +1,15 @@
-const defaultStore={
-    count:0
-}
+import {fromJS} from "immutable"
+import {GET_LIST_DATA} from "./actionCreator"
+const defaultStore=fromJS({
+    listData:[]
+})
 
 export default (state=defaultStore,action)=>{
     switch (action.type){
-        case "NUM_ADD":
-                state.num++;
-            break;
+        case  GET_LIST_DATA:
+            return state.update("listData",x=>{
+                return x.concat(fromJS(action.res));
+            });
     }
     return state;
 }
