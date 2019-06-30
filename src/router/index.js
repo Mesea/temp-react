@@ -5,6 +5,8 @@ import Info from "@/components/main/info/info"
 import News from "@/components/main/news/news"
 import Test from "@/components/main/test/test"
 
+
+
 export default class extends Component{
     render(){
         return (
