@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import {fromJS} from "immutable"
 const defaultStore=fromJS({
     count:0

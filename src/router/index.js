@@ -1,9 +1,9 @@
 import React,{Fragment,Component} from "react";
 import { Route ,Redirect,Switch} from "react-router-dom";
 
-import Info from "@/components/main/Info/Info"
-import News from "@/components/main/News/News"
-import Test from "@/components/main/Test/Test"
+import Info from "@/components/main/info/info"
+import News from "@/components/main/news/news"
+import Test from "@/components/main/test/test"
 
 export default class extends Component{
     render(){

@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import {fromJS} from "immutable"
 import {GET_LIST_DATA} from "./actionCreator"
 const defaultStore=fromJS({
