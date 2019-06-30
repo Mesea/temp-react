@@ -1,6 +1,5 @@
 import axios from "axios"
-import { log } from "util";
-import { set } from "immutable";
+
 
 export const GET_LIST_DATA="info/get_list_data";
 

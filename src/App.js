@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from "axios";
+
 import Route from "@/router"
 import Header from "@/components/layout/header"
 class App extends React.Component{
