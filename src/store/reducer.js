@@ -1,7 +1,7 @@
 // import {combineReducers} from "redux"
 import {combineReducers} from "redux-immutable"
-import infoReducer from "@/components/main/Info/reducer"
-import newsReducer from "@/components/main/News/reducer"
+import infoReducer from "@/components/main/info/reducer"
+import newsReducer from "@/components/main/news/reducer"
 
 export default combineReducers({
     infoReducer,

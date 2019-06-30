@@ -1,9 +1,5 @@
 import axios from "axios"
-
-
 export const GET_LIST_DATA="info/get_list_data";
-
-
 export const loadListData=(res)=>{
     return {
         type:GET_LIST_DATA,
@@ -13,7 +9,7 @@ export const loadListData=(res)=>{
 export const loadListDataAsyanc=(dispatch)=>{
 
     return ()=>{
-        axios({
+      axios({
             method: 'get',
             url: '/apis/home/getRecommendShow',
             data: {
