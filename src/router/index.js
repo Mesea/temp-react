@@ -17,7 +17,7 @@ export default class extends Component{
                         <Route path="/test"  component={Test} />
                         {/* exact绝对匹配 */}
                         {/* <Route path="/Test/:name/:id" exact component={Test} /> */}
-                        <Redirect path="/" to="/Info"/>
+                        <Redirect path="/" to="/info"/>
                     </Switch>
             </Fragment>
         )
