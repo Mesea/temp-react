@@ -1,12 +1,9 @@
-// import {combineReducers} from "redux"
-import {combineReducers} from "redux-immutable"
-import infoReducer from "@/components/main/info/reducer"
-import newsReducer from "@/components/main/news/reducer"
+// import {combineReducers} from "redux"  //导致向外暴露数据最外层是 object
+import {combineReducers} from 'redux-immutable'      //将最外层转成Map对象
+import indexReducer from "@/components/main/index/reducer"
+import juReducer from "@/components/main/ju/reducer"
 
 export default combineReducers({
-    infoReducer,
-    newsReducer
+    indexReducer,
+    juReducer
 })
-
-// import {combineReducers} from "redux"  他只能返回一js对象类型
-//redux给提供了     redux-immutable ,从根把数据类型转成 immutable类型

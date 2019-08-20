@@ -1,25 +1,22 @@
-import React,{Fragment,Component} from "react";
-import { Route ,Redirect,Switch} from "react-router-dom";
+import React,{Fragment} from 'react';
+import {Route,Redirect } from 'react-router-dom';
 
-import Info from "@/components/main/info/info"
-import News from "@/components/main/news/news"
-import Test from "@/components/main/test/test"
+import Index from "@/components/main/index"
+import Ju from "@/components/main/ju"
+import Piao from "@/components/main/piao"
+import My from "@/components/main/my"
 
 
-
-export default class extends Component{
+export default class  extends React.PureComponent{
     render(){
         return (
             <Fragment>
-                    <Switch>
-                        <Route path="/info" component={Info} />
-                        <Route path="/news"  component={News} />
-                        <Route path="/test"  component={Test} />
-                        {/* exact绝对匹配 */}
-                        {/* <Route path="/Test/:name/:id" exact component={Test} /> */}
-                        <Redirect path="/" to="/info"/>
-                    </Switch>
+                <Route path="/index" component={Index}/>   
+                <Route path="/ju" component={Ju}/>   
+                <Route path="/piao" component={Piao}/>   
+                <Route path="/my" component={My}/>   
+                <Redirect path="/" to="/index"/>
             </Fragment>
-        )
+        )    
     }
 }

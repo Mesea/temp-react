@@ -1,17 +1,23 @@
-const proxy = require('http-proxy-middleware');
+const proxy = require("http-proxy-middleware");
 
-// 所有http请求都会从这个中间件过
-module.exports =function (app){
-    app.use(proxy('/apis',{
-        // 需要代理的主机
-        target: 'https://m.juooo.com',
-        // 是否跨域
-        changeOrigin: true,
-        //代理完成将url复写
+//这个里面是nodejs范畴
+//输出在命令行里面
+module.exports = function (app) {
+    // console.log(app) 
+    // var userInfo=[];
+    app.get("/test", (req, res) => {
+        res.send("OK !!!!!")
+    })
+    // https://api.juooo.com
+    app.use(proxy("/apis",{
+        target:"https://api.juooo.com",
+        changeOrigin:true,
         pathRewrite:{
             "^/apis":""
         }
     }))
 }
 
-// https://m.juooo.com
+// var express= require("express");
+// var app= express();
+
